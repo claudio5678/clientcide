@@ -156,8 +156,7 @@ SimpleSlideShow.Carousel = new Class({
 			position: 'relative'
 		});
 		this.parent(options);
-		if ((!Browser.Engine.gecko) && (this.slides.length > 1)) {
-			//this.show(this.startIndexOriginal);
+		if (!Browser.Engine.gecko) {
 			this.fx = this.fx || new Fx.Tween(this.container, {
 				property: 'left'
 			});
